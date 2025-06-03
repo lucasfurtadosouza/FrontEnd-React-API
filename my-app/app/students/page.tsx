@@ -1,25 +1,30 @@
-import TableRowUniversity from "../components/TableRowUniversity";
+import TableRowStudent from "../components/TableRowStudent";
 
-export default async function University() {
-    const request = await fetch("https://serverapi-kappa.vercel.app/api/universities");
-    const listUniversity = await request.json();
+export default async function Student() {
 
-    // Puxa todas as Universidades e armazenar elas na coleção
+    const request = await fetch("https://serverapi-kappa.vercel.app/api/students");
+    const listStudent = await request.json();
+
+    // Puxa todas os Estudantes e armazenar eles na coleção
     // usando valores dinâmicos para criar linhas para a tabela.
-    const universities = [];
-    for(const university of listUniversity){
-        universities.push(<TableRowUniversity key={university.id} university={university} />);
+    const students = [];
+    for(const student of listStudent){
+        students.push(<TableRowStudent key={student.id} student={student} />);
     }
 
     return(
         <div>
-            {/* Tabela para exibir as Universidades */}
-            <h1 className="mb-3  font-bold ">Lista de Universidades</h1>
+            {/* Tabela para exibir os Estudantes */}
+            <h1 className="mb-3  font-bold ">Lista de Estudantes</h1>
             <table className="mb-6">
                 <tbody>
-                    {universities}
+                    {students}
                 </tbody>
             </table>
+
+
+
+
 
             {/* Botão de Voltar */}
             <a href="../"
