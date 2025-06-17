@@ -1,3 +1,4 @@
+"use client";
 import TableRowUniversity from "../components/TableRowUniversity";
 
 export default async function University() {
