@@ -5,6 +5,7 @@ Este repositório é dedicado aos estudos e práticas da disciplina de Desenvolv
 ## 📝 Sobre o Projeto
 * Construção de interfaces de usuário com **React**.
 * Utilização do framework **Next.js** para otimizações e funcionalidades avançadas.
+* Implementação de componentes de UI com **Shadcn/ui**, para agilidade do desenvolvimento.
 * **Criação dinâmica de linhas em tabelas** para listar informações, como:
     * Listagem de **Universidades** (dados buscados via API).
     * Listagem de **Estudantes** (dados buscados via API).
