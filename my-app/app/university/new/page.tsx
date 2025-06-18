@@ -32,7 +32,7 @@ export default function NewUniversity() {
     }
     return (
         <div>
-            <h1>Cadastrar Univesidade</h1>
+            <h1>Cadastrar Universidade</h1>
             <form onSubmit={saveUniversity}>
                 <input type="text" placeholder="Abreviatura Universidade" id="abreviatura" required />
                 <input type="text" placeholder="Nome " id="nome" />
