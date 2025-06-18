@@ -1,10 +1,10 @@
-import DeleteUniversity from "./DeleteUniversity";
+import DeleteStudent from "./DeleteStudent";
 import { Suspense } from "react";
     
 export default function Page() {
     return (
         <Suspense>
-            <DeleteUniversity/>
+            <DeleteStudent/>
         </Suspense> 
     );
 }
