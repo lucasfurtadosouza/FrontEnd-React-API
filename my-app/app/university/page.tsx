@@ -11,24 +11,24 @@ export default async function University() {
         universities.push(<TableRowUniversity key={university.id} university={university} />);
     }
 
-    return(
-        <div>
-            {/* Tabela para exibir as Universidades */}
-            <h1 className="mb-3  font-bold ">Lista de Universidades</h1>
-            <table className="mb-6">
-                <tbody>
+    return (
+        <div className="container mx-auto py-8 flex flex-col items-center">
+            <h1 className="mb-6 text-3xl font-bold tracking-tight">Lista de Universidades</h1>
+            <div className="rounded-lg border shadow-sm bg-background w-full max-w-3xl">
+            <table className="w-full text-sm text-center">
+                <thead className="bg-muted">
+                    <tr>
+                        <th className="px-4 py-3 font-semibold">Abreviação</th>
+                        <th className="px-4 py-3 font-semibold">Nome</th>
+                        <th className="px-4 py-3 font-semibold">Endereço</th>
+                        <th className="px-4 py-3 font-semibold">Ações</th>
+                    </tr>
+                </thead>
+                <tbody className="divide-y">
                     {universities}
                 </tbody>
             </table>
-
-            {/* Botão de Voltar */}
-            <a href="../"
-                className="inline-flex items-center bg-black px-3 py-1.5 rounded-md text-run-500 hover:bg-gray-900 duration-500">
-                    <svg className="h-4 mr-1.5 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                        <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
-                    </svg>
-                <span className="text-white ml-1 font-medium text-md">Voltar</span>
-            </a>
+            </div>
         </div>
-    )
+    );
 }

@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 
+
 export default function NewStudent() {
 
     async function saveStudent(event: React.FormEvent) {
@@ -31,16 +32,39 @@ export default function NewStudent() {
         }
     }
     return (
-        <div>
-            <h1>Cadastrar Estudante</h1>
-            <form onSubmit={saveStudent}>
-                <input type="text" placeholder="RA" id="ra" required />
-                <input type="text" placeholder="Nome " id="nome" />
-                <input type="text" placeholder="email" id="email" /> <br />
-
-                <Button type="submit"> Salvar </Button>
-
-
+        <div className="max-w-md mx-auto mt-10 p-8 bg-white rounded-lg shadow-md">
+            <h1 className="text-2xl font-bold mb-6 text-center">Cadastrar Estudante</h1>
+            <form onSubmit={saveStudent} className="space-y-4">
+            <div>
+                <input
+                type="text"
+                placeholder="RA"
+                id="ra"
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+            </div>
+            <div>
+                <input
+                type="text"
+                placeholder="Nome"
+                id="nome"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+            </div>
+            <div>
+                <input
+                type="text"
+                placeholder="Email"
+                id="email"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+            </div>
+            <div className="pt-2">
+                <Button type="submit" className="w-full">
+                Salvar
+                </Button>
+            </div>
             </form>
         </div>
 
